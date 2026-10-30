@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tell us about the space, dates, and location you need for your workspace."
+    />
+    <title>Your requirements — Workspace estimate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Poppins:wght@600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="page-header">
+        <h1 class="page-title">Get an Estimate for Workspace</h1>
+      </header>
+
+      <main class="main-content requirements-content">
+        <form
+          class="workspace-form requirements-form"
+          action="requirements.html"
+          method="get"
+        >
+          <section
+            class="form-card requirements-card"
+            aria-labelledby="requirements-heading"
+          >
+            <div class="card-heading requirements-heading">
+              <h2 class="card-title" id="requirements-heading">Your Requirements</h2>
+            </div>
+
+            <div class="fields requirements-fields">
+              <div class="field short-field">
+                <label for="space-type">Space Type</label>
+                <select id="space-type" name="space-type" required>
+                  <option value="event-space">Event Space</option>
+                  <option value="private-office">Private Office</option>
+                  <option value="coworking-space">Coworking Space</option>
+                  <option value="meeting-room">Meeting Room</option>
+                </select>
+              </div>
+
+              <div class="field short-field people-field">
+                <label for="people">Number of People</label>
+                <input
+                  id="people"
+                  name="people"
+                  type="number"
+                  min="1"
+                  step="1"
+                  placeholder="01"
+                  required
+                />
+              </div>
+
+              <div class="date-row">
+                <div class="field date-field">
+                  <label for="check-in">Check In</label>
+                  <div class="date-control">
+                    <input class="date-input range-date-input" id="check-in" name="check-in" type="date" required />
+                    <span class="date-placeholder range-date-placeholder" aria-hidden="true">dd - mm - yyyy</span>
+                    <span class="date-arrows" aria-hidden="true"><span class="date-arrow"></span><span class="date-arrow date-arrow-next"></span></span>
+                  </div>
+                </div>
+
+                <div class="field date-field">
+                  <label for="check-out">Check Out</label>
+                  <div class="date-control">
+                    <input class="date-input range-date-input" id="check-out" name="check-out" type="date" required />
+                    <span class="date-placeholder range-date-placeholder" aria-hidden="true">dd - mm - yyyy</span>
+                    <span class="date-arrows" aria-hidden="true"><span class="date-arrow"></span><span class="date-arrow date-arrow-next"></span></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field short-field">
+                <label for="location">Location</label>
+                <select id="location" name="location" required>
+                  <option value="" disabled selected>City/Area</option>
+                  <option value="poltava">Poltava</option>
+                  <option value="kyiv">Kyiv</option>
+                  <option value="lviv">Lviv</option>
+                  <option value="dnipro">Dnipro</option>
+                </select>
+              </div>
+
+              <div class="preferences short-field">
+                <div class="field">
+                  <label for="preferences">Any specific preferences</label>
+                  <select id="preferences" name="preferences">
+                    <option class="preference-yes" value="yes" selected>Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+
+                <div class="field preference-details">
+                  <label class="visually-hidden" for="preference-details">
+                    Please describe your preferences
+                  </label>
+
+                  <textarea
+                    id="preference-details"
+                    name="preference-details"
+                    placeholder="Please mention here"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="form-actions requirements-actions">
+            <a class="button button-secondary" href="index.html">Back</a>
+            <button class="button button-primary submit-button" type="submit">Submit</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

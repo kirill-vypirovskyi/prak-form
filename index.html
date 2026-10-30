@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get a workspace estimate. Share your contact details and workspace requirements.">
+    <title>Contact details — Workspace estimate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="page">
+      <header class="page-header">
+        <h1 class="page-title">Get an Estimate for Workspace</h1>
+      </header>
+
+      <main class="main-content">
+        <div class="intro">
+          <h2 class="intro-title">Post Your Requirements</h2>
+          <p class="intro-description">Please fill the form below to receive a quote for workspace.<br>
+            Please add all the details required.</p>
+        </div>
+
+        <form class="workspace-form" action="requirements.html" method="get">
+          <section class="form-card" aria-labelledby="contact-heading">
+            <div class="card-heading">
+              <h3 class="card-title" id="contact-heading">Contact details</h3>
+              <p class="card-description">Please fill your information so we can get in touch with you.</p>
+            </div>
+
+            <div class="fields contact-fields">
+              <div class="field contact-field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your Name" autocomplete="name" required>
+              </div>
+              <div class="field contact-field phone-field">
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" type="tel" placeholder="(123) 456 - 7890" autocomplete="tel" required>
+              </div>
+              <div class="field contact-field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="Your Mail ID" autocomplete="email" required>
+              </div>
+              <div class="field contact-field contact-date-field">
+                <label for="date">Date</label>
+                <div class="date-control">
+                  <input class="date-input" id="date" name="date" type="date" required>
+                  <span class="date-placeholder" aria-hidden="true">dd - mm - yyyy</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="form-actions contact-actions">
+            <button class="button button-primary" type="submit">Next</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
